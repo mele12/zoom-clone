@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
   });
 
   io.on('connection',( socket ) => {
-    socket.on('join-room', () => {
+    socket.on('join-room', (roomId) => {
 
-      console.log('bini joined');
+      console.log('bini joined', roomId);
     });
       // socket.join(roomId)
       // socket.to(roomId).broadcast.emit('user-connected', userId);
